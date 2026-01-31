@@ -29,8 +29,8 @@ jobs:
         run: pip install -r requirements.txt
       - name: first_test
         if: "github.event.inputs.deployment_target == 'first_test'"
-        run: pytest tests\test_button.py
+        run: pytest tests/test_button.py
       - name: second_test
         if: "github.event.inputs.deployment_target == 'second_test'"
-        run: pytest tests\test_looks_like_a_button.py::test_button_exist_2
+        run: pytest tests/test_looks_like_a_button.py
 
